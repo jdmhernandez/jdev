@@ -1,36 +1,17 @@
 ---
 // assets
 import { Image } from "astro:assets";
-import swissm from "@/images/work/swissm.jpg";
-import helvetica from "@/images/work/helvetica.jpg";
-import principles from "@/images/work/principles.jpg";
+import capstone from "@/images/work/lpp-logo-capstone.jpg"; // Capstone project image
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 const data = [
   {
-    image: swissm,
-    period: "2023–2025",
-    title: "Swiss Modernism Showcase",
-    description: `Curated and designed an exhibition highlighting the evolution of Swiss modernism in graphic design, showcasing iconic works and their influence on contemporary design.`,
-    location: "Zurich, Switzerland",
-    link: "#_",
-  },
-  {
-    image: helvetica,
-    period: "2020–2023",
-    title: "Helvetica Redefined",
-    description: `Redesigned the Helvetica type specimen to include modern variations and applications. The work explored the typeface's versatility and its legacy in Swiss design.`,
-    location: "Basel, Switzerland",
-    link: "#_",
-  },
-  {
-    image: principles,
-    period: "2017–2020",
-    title: "Swiss Design Principles",
-    description: `Developed educational materials and workshops on the core principles of Swiss design, focusing on grid systems, typography, and minimalist aesthetics.`,
-    location: "Geneva, Switzerland",
-    link: "#_",
+    image: capstone,
+    period: "2025",
+    title: "Capstone Project",
+    description: `My capstone project for NAIT Digital Media & Information Technology diploma. A comprehensive web application showcasing modern web development skills with a mix of coding, WordPress and design principles.`,
+    link: "https://lollipopspartypackages.ca/",
   },
 ];
 ---
@@ -50,7 +31,7 @@ const data = [
         </Text>
       </div>
       <div
-        class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8"
+        class="lg:col-span-2 grid grid-cols-1 gap-y-12 gap-x-8"
       >
         {
           data.map((work) => (
@@ -68,7 +49,7 @@ const data = [
                   variant="textSM"
                   class="text-base-900   font-bold uppercase "
                 >
-                  <a href={work.link}>
+                  <a href={work.link} target="_blank" rel="noopener noreferrer">
                     <>
                       <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
                       <span class="relative z-10"> {work.title}</span>

@@ -1,0 +1,57 @@
+---
+// assets
+import { Image } from "astro:assets";
+import photography from "@/images/work/jdevphotos.jpg"; // Photography portfolio image
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<section>
+  <Wrapper variant="standard">
+    <div
+      class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b py-8 border-base-200"
+    >
+      <div class="lg:sticky lg:top-24 lg:z-40 self-start">
+        <Text
+          tag="h2"
+          variant="textSM"
+          class="text-base-900 font-bold uppercase"
+        >
+          Photography
+        </Text>
+      </div>
+      <div class="lg:col-span-2">
+        <article class="relative">
+          <Image
+            width={800}
+            height={600}
+            src={photography}
+            alt="Photography Work"
+            class="aspect-12/7 object-cover object-top w-full mb-4"
+          />
+          <div class="flex justify-between items-center">
+            <Text
+              tag="h3"
+              variant="textSM"
+              class="text-base-900 font-bold uppercase"
+            >
+              <a href="https://jdmhernandez.ca/photography/" target="_blank" rel="noopener noreferrer">
+                View Photography Portfolio
+                <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+                <span class="relative z-10">→</span>
+              </a>
+            </Text>
+            <Text
+              tag="p"
+              variant="textXS"
+              class="text-base-600"
+            >
+              Opens in new tab
+            </Text>
+          </div>
+        </article>
+      </div>
+    </div>
+  </Wrapper>
+</section>
