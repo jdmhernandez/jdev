@@ -4,19 +4,21 @@ import Logo from "@/components/assets/Logo.astro";
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import ThemeToggle from "@/components/fundations/elements/ThemeToggle.astro";
 ---
 
 <section>
   <Wrapper variant="standard" class="pt-8 flex flex-col justify-between h-dvh">
     <div class="flex flex-col lg:flex-row lg:justify-between items-start gap-8">
-      <Text tag="h1" variant="display6XL" class="text-black font-bold">
+      <Text tag="h1" variant="display4XL" class="text-black dark:text-white font-bold">
         jdm.hernandez
       </Text>
       <div class="flex gap-2 items-center w-fit order-first lg:order-none ml-auto">
+        <ThemeToggle />
         <Text
           tag="a"
           variant="textXS"
-          class="text-base-900 hover:text-base-500 font-bold uppercase"
+          class="text-base-900 dark:text-base-100 hover:text-base-500 dark:hover:text-base-400 font-bold uppercase"
           href="/"
         >
           Home</Text
@@ -24,7 +26,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
         <Text
           tag="a"
           variant="textXS"
-          class="text-base-900 hover:text-base-500 font-bold uppercase"
+          class="text-base-900 dark:text-base-100 hover:text-base-500 dark:hover:text-base-400 font-bold uppercase"
           href="/system/overview"
         >
            overview</Text
@@ -33,18 +35,18 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
     </div>
 
     <div
-      class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b pb-8 border-base-200"
+      class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b pb-8 border-base-200 dark:border-base-700"
     >
       <div>
         <Text
           tag="h1"
           variant="textXS"
-          class="text-base-900 font-bold uppercase"
+          class="text-base-900 dark:text-base-100 font-bold uppercase"
           >Web Designer in Edmonton, Alberta</Text
         >
       </div>
       <div class="lg:col-span-2">
-        <Text tag="p" variant="textSM" class="text-base-600">
+        <Text tag="p" variant="textSM" class="text-base-600 dark:text-base-400">
          Hi, I’m Justin! I also go by Jdev. I’m a web designer and developer currently finishing my diploma in Digital Media & Information Technology at NAIT. I love creating websites that are not only functional but also visually engaging, blending design and code to bring ideas to life.
 
         When I’m not building websites, you’ll probably find me behind the camera—capturing moments, telling stories, and exploring the art of photography. Whether it’s designing a website or shooting a photoshoot, I’m passionate about creating experiences that leave an impression.
