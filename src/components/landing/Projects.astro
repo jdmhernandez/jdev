@@ -1,11 +1,9 @@
 ---
 // Assets
 import { Image } from "astro:assets";
-import one from "@/images/projects/1.png";
-import two from "@/images/projects/2.png";
+import lppLogo from "@/images/work/lpp-logo-capstone.jpg";
 import three from "@/images/projects/3.png";
 import four from "@/images/projects/4.png";
-import five from "@/images/projects/5.png";
 import six from "@/images/projects/6.png";
 
 // Fundations
@@ -14,51 +12,41 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Icons
 const data = [
   {
-    image: one,
+    image: lppLogo,
     year: "2025",
-    title: "Project Title 1",
-    link: "#",
-    description: `Project description placeholder. I'll update this soon.`,
-  },
-  {
-    image: two,
-    year: "2024",
-    title: "Project Title 2",
-    link: "#",
-    description: `Just a placeholder. I'll upload and link projects soon.`,
+    title: "Lollipop's Party Packages",
+    link: "https://lollipopspartypackages.ca/",
+    alt: "Lollipop's Party Packages logo design for capstone project",
+    description: `My capstone project for NAIT's Digital Media program—a ongoing development of a complete e-commerce website for a local party supply business. I handle the deployment as the main developer and the coding. Using WordPress for the backend and custom CSS. It's a responsive site that works beautifully on mobile devices. The biggest challenge was creating it from scratch as it was built from Wix, although my team quickly picked up on the development. This project taught me that the best designs are invisible; when users can focus on what they're buying rather than how to buy it, you've done something right.`,
   },
   {
     image: three,
-    year: "2024",
-    title: "Project Title 3",
-    link: "#",
-    description: `Project description placeholder. I'll update this soon.`,
+    year: "2025",
+    title: "Personal Portfolio (This Site!)",
+    link: "/",
+    alt: "Clean, modern portfolio website with dark/light theme toggle and responsive grid layout",
+    description: `This very website you're looking at! I built it using Astro and Tailwind CSS to create something fast, accessible, and easy to maintain. The challenge was creating a design system that could scale while keeping the code clean and the performance lightning-quick. I love how the dark/light theme toggle feels seamless, and the responsive grid layouts adapt perfectly to any screen size. Building this taught me that sometimes the best way to showcase your skills is by solving the problems you know best—creating a portfolio that actually represents who you are as a developer.`,
   },
   {
     image: four,
-    year: "2023",
-    title: "Comic Chronicler",
+    year: "2024",
+    title: "Comic Chronicler Database",
     link: "https://jdmhernandez.ca/lab-05-comics/public/index.php",
-    description: `A PHP web application built for a database class lab project. Features advanced search functionality, browse by genre, character, and more.`,
-  },
-  {
-    image: five,
-    year: "2023",
-    title: "Project Title 5",
-    link: "#",
-    description: `Project description placeholder. I'll update this soon.`,
+    alt: "Comic book database interface showing search filters by genre, character, and publisher",
+    description: `One of my favorite projects from my web development course—a comprehensive comic book database built with PHP and MySQL. I created advanced search and filtering capabilities that let users browse by genre, character, publisher, and more. The real fun came when I added features like "similar comics" recommendations and user-curated reading lists. This project taught me the importance of clean database design and how to make complex data feel simple and intuitive. Plus, I got to geek out over comic books while learning—talk about a win-win!`,
   },
   {
     image: six,
-    year: "2022",
-    title: "Project Title 6",
-    link: "#",
-    description: `Project description placeholder. I'll update this soon.`,
+    year: "2024",
+    title: "Simply Broccoli",
+    link: "https://simplybroccoli.netlify.app/",
+    alt: "Simply Broccoli website featuring broccolini recipes and cooking guides",
+    description: `I created a clean, modern design under a persona that showcases broccolini dishes with high-quality imagery and engaging storytelling. The site includes a comprehensive recipe collection, nutritional information, and seasonal growing insights. All hard-coded with a focus on user experience and mobile responsiveness.`,
   },
 ];
 ---
 
-<section>
+<section id="projects">
   <Wrapper variant="standard">
     <div
       class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b py-8 border-base-200 dark:border-base-700"
@@ -82,7 +70,7 @@ const data = [
                 width={800}
                 height={600}
                 src={project.image}
-                alt={project.title}
+                alt={project.alt}
                 class="lg:col-span-full aspect-12/7 object-cover object-top w-full"
               />
               <div class="lg:col-span-2">
